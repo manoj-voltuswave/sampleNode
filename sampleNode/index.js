@@ -6,11 +6,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 // Import routes
-const healthRoutes = require('./routes/health');
-const sampleRoutes = require('./sampleapi\'s/routes/sampleRoutes');
+const sampleRoutes = require('./src/routes/sampleapis/sampleapis.routes');
 
 // Use routes
-app.use('/api', healthRoutes);
 app.use('/api', sampleRoutes);
 
 // Start the server
